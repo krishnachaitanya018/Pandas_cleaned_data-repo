@@ -1,16 +1,16 @@
-#pandas cmds for cleaning data
+#pandas cmds for cleaning data..........
 
 To read a file from the system -
 pd.read_csv(r" Copy the Path of the CSV file")
 
-To read a file in specific Data Frame-
+To read a file in a specific Data Frame-
 df pd.read_csv(r" Copy the Path of the CSV file")
 df
 
 
 Filtering and Ordering:
 
-To get the inoformation from the data-
+To get the information from the data-
 df.info()
 
 
@@ -30,7 +30,7 @@ To display all the columns in the given file-
 df.columns
 
 
-To ddisplay what are the columns needed from the original data-
+To display what are the columns needed from the original data-
 df = df [['column_name', 'column_name']]
 df
 
@@ -48,7 +48,7 @@ To display the rows of a df -
 pd.set_option('display.max.rows', enter the no of rows)
 
 
-Setting one of the column as Index-
+Setting one of the columns as Index-
 df.set_index('Column Name')
 df
 
@@ -64,7 +64,7 @@ To find the duplicate values-
 df.duplicated().sum()
 
 
-To display count of duplicate values of columns- 
+To display the count of duplicate values of columns- 
 df.isna().sum()
 
 
@@ -72,12 +72,12 @@ To find if we have null values once data is cleaned-
 df1.isna().sum().sum()
 
 
-Using filter can display particular data of the columns-
+Using a filter can display particular data of the columns-
 df.filter(items = ['Column Name', 'Column Name'])
 
 
-Here by using LIKE we can filter specific data from the column -
-df.filter(like = 'Any specific data name', axis=0)
+Here by using LIKE, we can filter specific data from the column -
+df.filter(like = 'Any specific data-name', axis=0)
 
 
 Sorting a df of particular column
@@ -90,9 +90,9 @@ df1["column_name"].str.replace("$","").str.replace(".","")
 
 
 
-Using apply() method - if a column has true or false values to convert them into binary as 1/0- 
+Using the apply() method - if a column has true or false values convert them into binary as 1/0- 
 df["column_name"] = df1["column_name"].apply(lambda x:1 if x == True else 0)
 
 
-Using round() to round off a values for particular columns-
+Using round() to round off values for particular columns-
 df1["Product_price"].apply(lambda x:round(x))
