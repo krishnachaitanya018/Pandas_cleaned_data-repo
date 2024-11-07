@@ -96,3 +96,8 @@ df["column_name"] = df1["column_name"].apply(lambda x:1 if x == True else 0)
 
 Using round() to round off values for particular columns-
 df1["Product_price"].apply(lambda x:round(x))
+
+##Indexing......................
+
+loc property of the DataFrame object allows the return of specified rows and/or columns from that DataFrame 
+df.loc['Africa','Angola']
